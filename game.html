@@ -1,0 +1,137 @@
+<html>
+   <head>
+      <title>Bingo Loto</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+     <link rel="stylesheet" href="style.css"/>
+     
+   
+   </head>
+   <body>
+      <script src = "script.js"></script>
+      <audio controls id='music'>
+      <source src= "Sound/Benny hill.mp3" type="audio/mpeg" id="music_name">
+      </audio>
+      <button onclick='start_game(game)' id='draw'> Tirage... </button>
+      
+      <div id="ball">
+      <img src="Image/Boule rouge-1.png" alt="Boule tirée" id="ball_image">  </img>
+      <h1 id="last_number"> </h1>
+      </div>
+      <table id="number_picked">
+         <tr>
+         <td id="1" class="number_picked_case">1</td>
+         <td id="2" class="number_picked_case">2</td>
+         <td id="3" class="number_picked_case">3</td>
+         <td id="4" class="number_picked_case">4</td>
+         <td id="5" class="number_picked_case">5</td>
+         <td id="6" class="number_picked_case">6</td>
+         <td id="7" class="number_picked_case">7</td>
+         <td id="8" class="number_picked_case">8</td>
+         <td id="9" class="number_picked_case">9</td>
+         <td id="10" class="number_picked_case">10</td>
+         </tr>
+         <tr>
+         <td id="11" class="number_picked_case">11</td>
+         <td id="12" class="number_picked_case">12</td>
+         <td id="13" class="number_picked_case">13</td>
+         <td id="14" class="number_picked_case">14</td>
+         <td id="15" class="number_picked_case">15</td>
+         <td id="16" class="number_picked_case">16</td>
+         <td id="17" class="number_picked_case">17</td>
+         <td id="18" class="number_picked_case">18</td>
+         <td id="19" class="number_picked_case">19</td>
+         <td id="20" class="number_picked_case">20</td>
+         </tr>
+         <tr>
+         <td id="21" class="number_picked_case">21</td>
+         <td id="22" class="number_picked_case">22</td>
+         <td id="23" class="number_picked_case">23</td>
+         <td id="24" class="number_picked_case">24</td>
+         <td id="25" class="number_picked_case">25</td>
+         <td id="26" class="number_picked_case">26</td>
+         <td id="27" class="number_picked_case">27</td>
+         <td id="28" class="number_picked_case">28</td>
+         <td id="29" class="number_picked_case">29</td>
+         <td id="30" class="number_picked_case">30</td>
+         </tr>
+         <tr>
+         <td id="31" class="number_picked_case">31</td>
+         <td id="32" class="number_picked_case">32</td>
+         <td id="33" class="number_picked_case">33</td>
+         <td id="34" class="number_picked_case">34</td>
+         <td id="35" class="number_picked_case">35</td>
+         <td id="36" class="number_picked_case">36</td>
+         <td id="37" class="number_picked_case">37</td>
+         <td id="38" class="number_picked_case">38</td>
+         <td id="39" class="number_picked_case">39</td>
+         <td id="40" class="number_picked_case">40</td>
+         </tr>
+         <tr>
+         <td id="41" class="number_picked_case">41</td>
+         <td id="42" class="number_picked_case">42</td>
+         <td id="43" class="number_picked_case">43</td>
+         <td id="44" class="number_picked_case">44</td>
+         <td id="45" class="number_picked_case">45</td>
+         <td id="46" class="number_picked_case">46</td>
+         <td id="47" class="number_picked_case">47</td>
+         <td id="48" class="number_picked_case">48</td>
+         <td id="49" class="number_picked_case">49</td>
+         <td id="50" class="number_picked_case">50</td>
+         </tr>
+         <tr>
+         <td id="51" class="number_picked_case">51</td>
+         <td id="52" class="number_picked_case">52</td>
+         <td id="53" class="number_picked_case">53</td>
+         <td id="54" class="number_picked_case">54</td>
+         <td id="55" class="number_picked_case">55</td>
+         <td id="56" class="number_picked_case">56</td>
+         <td id="57" class="number_picked_case">57</td>
+         <td id="58" class="number_picked_case">58</td>
+         <td id="59" class="number_picked_case">59</td>
+         <td id="60" class="number_picked_case">60</td>
+         </tr>
+         <tr>
+         <td id="61" class="number_picked_case">61</td>
+         <td id="62" class="number_picked_case">62</td>
+         <td id="63" class="number_picked_case">63</td>
+         <td id="64" class="number_picked_case">64</td>
+         <td id="65" class="number_picked_case">65</td>
+         <td id="66" class="number_picked_case">66</td>
+         <td id="67" class="number_picked_case">67</td>
+         <td id="68" class="number_picked_case">68</td>
+         <td id="69" class="number_picked_case">69</td>
+         <td id="70" class="number_picked_case">70</td>
+         </tr>
+         <tr>
+         <td id="71" class="number_picked_case">71</td>
+         <td id="72" class="number_picked_case">72</td>
+         <td id="73" class="number_picked_case">73</td>
+         <td id="74" class="number_picked_case">74</td>
+         <td id="75" class="number_picked_case">75</td>
+         <td id="76" class="number_picked_case">76</td>
+         <td id="77" class="number_picked_case">77</td>
+         <td id="78" class="number_picked_case">78</td>
+         <td id="79" class="number_picked_case">79</td>
+         <td id="80" class="number_picked_case">80</td>
+         </tr>
+         <tr>
+         <td id="81" class="number_picked_case">81</td>
+         <td id="82" class="number_picked_case">82</td>
+         <td id="83" class="number_picked_case">83</td>
+         <td id="84" class="number_picked_case">84</td>
+         <td id="85" class="number_picked_case">85</td>
+         <td id="86" class="number_picked_case">86</td>
+         <td id="87" class="number_picked_case">87</td>
+         <td id="88" class="number_picked_case">88</td>
+         <td id="89" class="number_picked_case">89</td>
+         <td id="90" class="number_picked_case">90</td>
+         </tr>
+      
+      </table>
+     
+   </body>
+
+</html>
