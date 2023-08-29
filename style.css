@@ -61,8 +61,28 @@ body {
 }
 #draw {
    position: absolute;
-   text-align:center;
-   width: 10%;
-   left: 45%;
-   top:70%;
+   text-align: center;
+   width: 15%;
+   left: 42%;
+   top: 70%;
+   BACKGROUND-COLOR: AQUA;
+   border-color: blue;
+   border-radius: 2pc;
+   cursor: pointer;
+}
+#title
+{
+   color: red;
+   font-size: 90px;
+   font-family: arial;
+   
+}
+#contenair
+{
+   display:flex;
+   justify-content: center;
+   top: -60px;
+   visibility: : visible;
+   position: absolute;
+   width: 99%;
 }
