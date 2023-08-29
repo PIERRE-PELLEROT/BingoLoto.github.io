@@ -152,6 +152,8 @@ class Game{
          const button_draw = document.getElementById("draw");
          table_number.style.visibility = "visible";
          button_draw.style.visibility = "visible";
+         const title = document.getElementById("contenair");
+         title.style.visibility = "visible";
          this.pick_a_number();
          
          if (this.music_on){
@@ -163,6 +165,8 @@ class Game{
       const button_draw = document.getElementById("draw");
       table_number.style.visibility = "hidden";
       button_draw.style.visibility = "hidden";
+      const title = document.getElementById("contenair");
+      title.style.visibility = "hidden";
       
       const music = this.random_music();
       if (this.music_on){
