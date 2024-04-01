@@ -3,6 +3,8 @@
    position: relative;
    left:25%;
 }
+/*ok*/
+
 @media handled {
    #button_start {
       background: yellow;
