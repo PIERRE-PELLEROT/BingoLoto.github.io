@@ -5,28 +5,7 @@
 }
 /*ok*/
 
-@media handheld {
-   #button_start {
-      background: yellow;
-      border: yellow;
-      width: 10%;
-      text-align: center;
-      left: 45%;
-      position: absolute;
-      font-size: 35;
-   }
-   #draw {
-   position: absolute;
-   text-align: center;
-   width: 80%;
-   left: 10%;
-   top: 90%;
-   BACKGROUND-COLOR: AQUA;
-   border-color: blue;
-   border-radius: 2pc;
-   cursor: pointer;
-}
-}
+
 body {
    background: yellow;
 }
@@ -108,4 +87,26 @@ body {
    visibility: : visible;
    position: absolute;
    width: 99%;
+}
+@media handheld {
+   #button_start {
+      background: yellow;
+      border: yellow;
+      width: 10%;
+      text-align: center;
+      left: 45%;
+      position: absolute;
+      font-size: 35;
+   }
+   #draw {
+   position: absolute;
+   text-align: center;
+   width: 80%;
+   left: 10%;
+   top: 90%;
+   BACKGROUND-COLOR: AQUA;
+   border-color: blue;
+   border-radius: 2pc;
+   cursor: pointer;
+}
 }
