@@ -88,7 +88,7 @@ body {
    position: absolute;
    width: 99%;
 }
-@media handheld {
+@media all and (max-width:500px) {
    #button_start {
       background: yellow;
       border: yellow;
@@ -99,7 +99,7 @@ body {
       font-size: 35;
    }
    #draw {
-   position: absolute;
+   position: fixed;
    text-align: center;
    width: 80%;
    left: 10%;
