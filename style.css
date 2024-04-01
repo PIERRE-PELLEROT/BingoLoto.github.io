@@ -5,7 +5,7 @@
 }
 /*ok*/
 
-@media handled {
+@media handheld {
    #button_start {
       background: yellow;
       border: yellow;
