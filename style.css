@@ -3,8 +3,6 @@
    position: relative;
    left:25%;
 }
-/*ok*/
-
 
 body {
    background: yellow;
@@ -20,6 +18,7 @@ body {
    font-size: 35;
    
 }
+
 #number_picked {
    background: white;
    border: black 2px solid;
@@ -32,7 +31,6 @@ body {
    text-align: center;
    font-weight: bold;
    visibility: visible;
-   
    
 }
 #music {
@@ -54,12 +52,15 @@ body {
 }
 #last_number{
    position: absolute;
-   top: -10%;
+   top: 0;
    font-size: 180;
-   left: 28%;
+   left: 25%;
    text-align: center;
-   width: 40%;
+   width: 50%;
    font-family: calibri;
+   height:50%;
+   margin-top: 0;
+   padding-top:25%;
 }
 #draw {
    position: absolute;
@@ -89,6 +90,30 @@ body {
    width: 99%;
 }
 @media all and (max-width:500px) {
+   #logo_bingo {
+      width: 50%;
+      position: relative;
+      left:25%;
+      font-size: 50;
+   }
+   #title
+   {
+      color: red;
+      font-size: 50px;
+      font-family: arial;
+      
+   }
+   #contenair
+   {
+      top:0;
+      display:flex;
+      justify-content: center;
+      
+      visibility: : visible;
+      position: absolute;
+      width: 99%;
+   }
+
    #button_start {
       background: yellow;
       border: yellow;
@@ -99,14 +124,50 @@ body {
       font-size: 35;
    }
    #draw {
-   position: fixed;
+   position: absolute;
    text-align: center;
    width: 80%;
    left: 10%;
-   top: 90%;
+   top: 95%;
    BACKGROUND-COLOR: AQUA;
    border-color: blue;
    border-radius: 2pc;
    cursor: pointer;
-}
+   }
+   #ball{
+   width: 100%;
+   position: fixed;
+   top: 12%;
+   height: 40%;
+   display: flex;
+   left: 0px;  
+   align-items: center;
+   justify-content: center;
+   }
+   #last_number {
+   position: absolute;
+   top: 0;
+   font-size: 150;
+   left: 25%;
+   text-align: center;
+   width: 50%;
+   font-family: calibri;
+   height: 50%;
+   margin-top: 0;
+   padding-top: 25%;
+   }
+   
+   #number_picked {
+   background: white;
+   border: black 2px solid;
+   position: absolute;
+   left: 10%;
+   top: 55%;
+   width: 80%;
+   height: 30%;
+   border-collapse: collapse;
+   text-align: center;
+   font-weight: bold;
+   visibility: visible;
+   }
 }

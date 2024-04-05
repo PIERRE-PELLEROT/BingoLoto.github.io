@@ -1,10 +1,12 @@
 function hello(){
    console.log('HI');
 }
+
 function start_game(game){
    //setTimeout(game.pick_a_number, 3000);
    //game.pick_a_number();
    game.draw_the_draw();
+   //readTextFile("try.txt");
 }
 function sleep(milliseconds) {
   const date = Date.now();
@@ -13,10 +15,26 @@ function sleep(milliseconds) {
     currentDate = Date.now();
   } while (currentDate - date < milliseconds);
 }
+function readTextFile(file) {
+  var rawFile = new XMLHttpRequest();
+  rawFile.open("GET", file, false);
+  rawFile.onreadystatechange = function () {
+    if(rawFile.readyState === 4)  {
+      if(rawFile.status === 200 || rawFile.status == 0) {
+        var allText = rawFile.responseText;
+        console.log(allText);
+       }
+    }
+  }
+  rawFile.send('http');
+}
+
 
 
 class Game{
+   
    constructor () {
+      this.mobile_size = 750;
       this.number = [];
       this.number_max = 90;
       this.len_number = 90;
@@ -48,7 +66,10 @@ class Game{
    pick_a_number() {
       //console.log(this);
       const ball_div = document.getElementById("ball");
+      if (window.innerWidth >= this.mobile_size)
+      {
       ball_div.style.left  = '10%';
+      }
       const number = this.choice_number();
       const color_ball = Math.floor( Math.random()* 3);
       let image_ball = ""; 
@@ -140,9 +161,15 @@ class Game{
          this.ball.src  = image_ball;
          const ball_div = document.getElementById("ball");
          let width = ball_div.offsetWidth;
+         console.log(window.innerWidth, (window.innerWidth >= this.mobile_size));
          width = document.body.offsetWidth / 2 - width / 2;
          width = "" + width + "px";
-         ball_div.style.left  = width;
+         if (window.innerWidth >= this.mobile_size)
+         {
+            ball_div.style.left  = width;
+            console.log(width);
+         }
+         
          const number_in_ball = document.getElementById("last_number");
       
          number_in_ball.innerHTML = ""+number;
